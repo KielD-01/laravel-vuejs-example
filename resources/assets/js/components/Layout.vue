@@ -1,23 +1,26 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card card-default">
-                    <div class="card-header">Example Component</div>
+    <div class="container-fluid">
+        <BlockUI :message="this.$store.state.blockUI.message" :html="this.$store.state.blockUI.html"
+                 v-show="this.$store.state.blockUI.visible"></BlockUI>
+        <p-header></p-header>
 
-                    <div class="card-body">
-                        I'm an example component.
-                    </div>
-                </div>
-            </div>
+        <div class="content-center pt-4 pb-4">
+            <transition name="page" mode="out-in">
+                <router-view></router-view>
+            </transition>
         </div>
+
+        <p-footer></p-footer>
     </div>
 </template>
 
 <script>
     export default {
-        mounted() {
-            console.log('Component mounted.')
+        metaInfo: {
+            titleTemplate: 'Roman Kozin Portfolio | %s',
+            meta: [
+                {name: 'lang', content: 'en'}
+            ]
         }
     }
 </script>
