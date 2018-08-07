@@ -1,22 +1,49 @@
 {
-    "private": true,
-    "scripts": {
-        "dev": "npm run development",
-        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch": "npm run development -- --watch",
-        "watch-poll": "npm run watch -- --watch-poll",
-        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
-    },
-    "devDependencies": {
-        "axios": "^0.18",
-        "bootstrap": "^4.0.0",
-        "popper.js": "^1.12",
-        "cross-env": "^5.1",
-        "jquery": "^3.2",
-        "laravel-mix": "^2.0",
-        "lodash": "^4.17.4",
-        "vue": "^2.5.7"
-    }
+  "private": true,
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "postinstall": "opencollective postinstall"
+  },
+  "devDependencies": {
+    "axios": "^0.18",
+    "bootstrap": "^4.0.0",
+    "browser-sync-webpack-plugin": "2.0.1",
+    "cross-env": "^5.1",
+    "jquery": "^3.2",
+    "laravel-mix": "^2.0",
+    "lodash": "^4.17.4",
+    "popper.js": "^1.12",
+    "vue": "^2.5.17"
+  },
+  "dependencies": {
+    "bootstrap-vue": "^2.0.0-rc.11",
+    "browser-sync": "^2.24.6",
+    "font-awesome": "^4.7.0",
+    "node-sass": "^4.9.2",
+    "vee-validate": "^2.1.0-beta.7",
+    "vue-awesome": "^3.0.5",
+    "vue-axios": "^2.1.2",
+    "vue-blockui": "^1.1.7",
+    "vue-carousel": "^0.10.0",
+    "vue-meta": "^1.5.2",
+    "vue-recaptcha": "^1.1.1",
+    "vue-router": "^3.0.1",
+    "vue-router-sync": "^0.1.0",
+    "vue-sweetalert2": "^1.5.2",
+    "vue-tour": "^1.0.1",
+    "vue2-google-maps": "^0.10.1",
+    "vue2-sidebar": "0.0.11",
+    "vuex": "^3.0.1",
+    "vuex-router-sync": "^5.0.0"
+  },
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/romanovich095"
+  }
 }
