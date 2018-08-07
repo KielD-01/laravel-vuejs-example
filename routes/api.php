@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,17 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+
+Route::post('/contact', 'ContactController@store')->name('contact.store');
+
+Route::post('/login', 'UserController@login')->name('user.login');
+
+Route::get('/user', 'UserController@user')->name('user.me')
+    ->middleware('jwt.auth');
+
+Route::resource('users', 'UserController');
+
+Route::resource('articles', 'ArticleController');
+Route::resource('projects', 'ProjectController');
+Route::resource('technologies', 'TechnologyController');
+
